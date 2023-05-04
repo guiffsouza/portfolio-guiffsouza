@@ -7,6 +7,14 @@ import LogoGithub from '../assets/Github.svg';
 import LogoDocker from '../assets/Docker.svg';
 import LogoDjango from '../assets/Django.svg';
 import LogoNext from '../assets/Nextjs.svg';
+import ImageBackgroundMain from '../assets/background.png'
+import ImgGalaria1 from '../assets/1.jpg'
+import ImgGalaria2 from '../assets/2.jpg'
+import ImgGalaria3 from '../assets/3.png'
+import ImgGalaria4 from '../assets/4.png'
+import Banner from '../assets/banner.png'
+import Projeto from '../assets/projeto.png'
+import Arrow from '../assets/arrow.svg';
 
 export {
   LogoTypescript,
@@ -17,5 +25,13 @@ export {
   LogoGithub,
   LogoDocker,
   LogoDjango,
-  LogoNext
+  LogoNext,
+  ImageBackgroundMain,
+  ImgGalaria1,
+  ImgGalaria2,
+  ImgGalaria3,
+  ImgGalaria4,
+  Banner,
+  Projeto,
+  Arrow,
 }

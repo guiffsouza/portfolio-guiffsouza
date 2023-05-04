@@ -1,34 +1,26 @@
-import Background from "../../components/Background";
-import CardStack from "../../components/Card-stack";
-import { BoxHomePage, BoxTitulo, Grid, Titulo } from "./style";
-import { CardDatas } from "../../data/cards-data";
+import { useState } from "react";
+import Main from "./main";
+import MinhaStack from "./minha-stack";
+import NavBar from "../../components/Navbar";
+import SideBar from "../../components/SideBar";
+import Sobre from "./sobre";
+import MeusProjetos from "./meus-projetos";
 
 export default function HomePage(){
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const toggleButton = () => {
+    setIsOpen(!isOpen);
+  };
+
   return(
-    <Background>
-      <BoxHomePage>
-        <Grid>
-          <BoxTitulo>
-            <Titulo>Minha</Titulo>
-            <Titulo>Stack</Titulo>
-          </BoxTitulo>
-          {CardDatas.map((card) => {
-            return(
-              <CardStack 
-              variant={card.variant} 
-              column={card.column} 
-              row={card.row}
-              image={card.image}
-              alt={card.alt}
-              experiencia={card.experiencia}
-              linguagem={card.linguagem}
-              id={card.id}
-              key={card.id}
-            />
-            )
-          })}
-        </Grid>
-      </BoxHomePage>
-    </Background>
+    <>
+      <SideBar isOpen={isOpen} toggleButton={toggleButton} />
+      <NavBar toggleButton={toggleButton} />
+      <Main/>
+      <Sobre/>
+      <MeusProjetos/>
+      <MinhaStack/>
+    </>
   )
 }
