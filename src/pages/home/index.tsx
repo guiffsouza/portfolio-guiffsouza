@@ -5,6 +5,7 @@ import NavBar from "../../components/Navbar";
 import SideBar from "../../components/SideBar";
 import Sobre from "./sobre";
 import MeusProjetos from "./meus-projetos";
+import Footer from "./footer";
 
 export default function HomePage(){
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -21,6 +22,7 @@ export default function HomePage(){
       <Sobre/>
       <MeusProjetos/>
       <MinhaStack/>
+      <Footer/>
     </>
   )
 }

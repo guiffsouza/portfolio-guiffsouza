@@ -8,13 +8,13 @@ export default function MeusProjetos(){
     <Background>
       <Container>
         <Grid>
-          <Content column="1 / 4" row="1 / 1">
+          <Content variant="borda" column="1 / 4" row="1 / 1">
             <Titulo>Meus <span>Projetos</span></Titulo>
           </Content>
-          <Content column="1 / 3" row="4 / 4">
+          <Content variant="borda" column="1 / 3" row="4 / 4">
             <Image image={Projeto}/>
           </Content>
-          <Content column="3 / 3" row="4 / 4">
+          <Content variant="borda" column="3 / 3" row="4 / 4">
             <BoxTexto>
               <BoxIcon>
                 <a href="#">

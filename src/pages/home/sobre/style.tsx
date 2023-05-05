@@ -8,7 +8,7 @@ export const Grid = styled.section`
   grid-template-rows: 1fr 1fr 2fr;
   align-items: center;
   gap: 0;
-  background-color: #0e0e0e;
+  background-color: ${({theme}) => theme.bodyBackground};
   height: 60vh;
 `
 
@@ -26,28 +26,28 @@ export const Link = styled.a`
 
 export const IconGitHub = styled(BsGithub)`
   font-size: 3em;
-  color: #5A5757;
+  color: ${({theme}) => theme.borda};
   cursor: pointer;
   :hover{
-    color: #ff5b50;
+    color: ${({theme}) => theme.red};
   }
 `
 
 export const IconLinkedin = styled(BsLinkedin)`
   font-size: 3em;
-  color: #5A5757;
+  color: ${({theme}) => theme.borda};
   cursor: pointer;
   :hover{
-    color: #ff5b50;
+    color: ${({theme}) => theme.red};
   }
 `
 
 export const IconInstagram = styled(BsInstagram)`
   font-size: 3em;
-  color: #5A5757;
+  color: ${({theme}) => theme.borda};
   cursor: pointer;
   :hover{
-    color: #ff5b50;
+    color: ${({theme}) => theme.red};
   }
 `
 
@@ -61,7 +61,7 @@ export const BoxTexto = styled.div`
 `
 
 export const Texto = styled.p`
-  color: #fff;
+  color: ${({theme}) => theme.white};
   line-height: 21px;
 `
 

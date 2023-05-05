@@ -30,19 +30,19 @@ export const BoxTexto = styled.div`
 
   width: 100%;
   h1{
-    color: #fff;
+    color: ${({theme}) => theme.white};
     font-size: 2em;
     font-weight: 600;
     margin-bottom: 20px;
   }
   p{
-    color: #5A5757;
+    color: ${({theme}) => theme.borda};
     line-height: 30px;
     font-size: 1.3em;
     margin-bottom: 20px;
   }
   span{
-    color: #fff;
+    color: ${({theme}) => theme.white};
     font-weight: 600;
   }
 `
@@ -56,7 +56,7 @@ export const BoxIcon = styled.div`
 `
 
 export const GitHubIcon = styled(BsGithub)`
-  color: #5A5757;
+  color: ${({theme}) => theme.borda};
   font-size: 2em;
   :hover{
     color: #ff5b50;

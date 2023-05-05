@@ -6,19 +6,23 @@ interface NavProps {
 }
 
 export const Nav = styled.nav<NavProps>`
-  background: ${({ scrollNav }) => (scrollNav ? "#0e0e0e" : "transparent")};
-  height: 80px;
-  margin-top: -80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  ${({theme, scrollNav}) => {
+    return {
+      background: scrollNav ? theme.bodyBackground : "transparent",
+      height: "80px",
+      marginTop: "-80px",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      fontSize: "1rem",
+      position: "sticky",
+      top: "0",
+      zIndex: "10",
+    }
+  }}
   @media screen and(max-width: 960px) {
-    transition: 0.8s all ease;
-  }
+      transition: 0.8s all ease,
+    }
 `;
 
 export const NavBarContainer = styled.div`
@@ -58,7 +62,7 @@ export const MobileIcon = styled.div`
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
-    color: #fff;
+    color: ${({theme}) => theme.white};
   }
 `;
 
@@ -78,7 +82,7 @@ export const NavItem = styled.li`
 `;
 
 export const NavLinks = styled(LinkS)`
-  color: #fff;
+  color: ${({theme}) => theme.white};
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -86,7 +90,7 @@ export const NavLinks = styled(LinkS)`
   height: 100%;
   cursor: pointer;
   &.active {
-    border-bottom: 3px solid #ff5b50;
+    border-bottom: ${({theme}) => `3px solid ${theme.red}`};
   }
 `;
 
@@ -99,7 +103,7 @@ export const NavBtn = styled.nav`
 `;
 
 export const NavBtnLink = styled.a`
-  background: #ff5b50;
+  background:  ${({theme}) => theme.red};
   white-space: nowrap;
   padding: 10px 22px;
   color: #fff;
@@ -113,6 +117,6 @@ export const NavBtnLink = styled.a`
   font-weight: 00;
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #ff5b50;
+    background:  ${({theme}) => theme.red};
   }
 `;

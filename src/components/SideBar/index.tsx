@@ -37,7 +37,7 @@ export default function SideBar({ isOpen, toggleButton }: SideBarProps){
         </SideBarMenu>
         <SideBtnWrap>
           <SideBarRoute
-            href="https://api.whatsapp.com/send?phone=5521998043582"
+            href="https://api.whatsapp.com/send?phone=5521964726029"
             target="_blank"
           >
             Contato

@@ -7,22 +7,25 @@ interface SideBarContainerProps {
 }
 
 export const SideBarContainer = styled.aside<SideBarContainerProps>`
-  position: fixed;
-  z-index: 999;
-  width: 100%;
-  height: 100%;
-  background: #0d0d0d;
-  display: grid;
-  align-items: center;
-  top: 0;
-  left: 0;
-  transition: 0.3s all ease-in-out;
-  opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
-  top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
+  ${({isOpen, theme}) => {
+    return{
+      background: theme.bodyBackground,
+      opacity: isOpen ? '100%' : '0',
+      top: isOpen ? '0' : '-100%',
+      transition: '0.3 all ease-in-out',
+      position: 'fixed',
+      zIndex: '999',
+      width: '100%',
+      height: '100%',
+      display: 'grid',
+      alignItems: 'center',
+      left: '0',
+    }
+  }}
 `;
 
 export const CloseIcon = styled(FaTimes)`
-  color: #fff;
+  color: ${({theme}) => theme.white};
 `;
 
 export const Icon = styled.div`
@@ -36,7 +39,7 @@ export const Icon = styled.div`
 `;
 
 export const SideBarWrapper = styled.div`
-  color: #fff;
+  color: ${({theme}) => theme.white};
 `;
 
 export const SideBarMenu = styled.ul`
@@ -58,10 +61,10 @@ export const SideBarLink = styled(LinkS)`
   list-style: none;
   transition: 0.2s all ease-in-out;
   text-decoration: none;
-  color: #fff;
+  color: ${({theme}) => theme.white};
   cursor: pointer;
   &:hover {
-    color: #01bf71;
+    color: ${({theme}) => theme.red};
     transition: 0.2s ease-in-out;
   }
 `;
@@ -72,19 +75,23 @@ export const SideBtnWrap = styled.div`
 `;
 
 export const SideBarRoute = styled.a`
-  background: #f74b2d;
-  white-space: nowrap;
-  padding: 16px 64px;
-  color: #fff;
-  font-weight: 500;
-  font-size: 16px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    color: #010606;
-  }
+  ${({theme}) => {
+    return {
+      background: theme.red,
+      whiteSpace: "nowrap",
+      padding: "16px 64px",
+      color: theme.white,
+      fontWeight: "500",
+      fontSize: "16px",
+      outline: "none",
+      border: "none",
+      cursor: "pointer",
+      transition: "all 0.2s ease-in-out",
+      textDecoration: "none",
+      ':hover' : {
+        transition: "all 0.2s ease-in-out",
+        color: theme.black,
+      }
+    }
+  }}
 `;

@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const BackgroundStyle = styled.section`
-  ${()=>{
+  ${({theme})=>{
     return {
-      backgroundColor: "#0e0e0e"
+      backgroundColor: theme.bodyBackground,
     }
   }}
 `
