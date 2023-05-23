@@ -6,7 +6,7 @@ export const Grid = styled.div`
   grid-template-rows: 1fr 1fr 1fr 1fr;
   align-items: center;
   gap: 40px;
-`
+`;
 
 export const BoxTitulo = styled.div`
   display: flex;
@@ -16,4 +16,5 @@ export const BoxTitulo = styled.div`
   grid-column-start: 2;
   grid-column-end: 2;
   grid-row: 1;
-`
+  align-self: flex-start;
+`;

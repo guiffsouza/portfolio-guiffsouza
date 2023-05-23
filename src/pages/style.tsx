@@ -1,40 +1,40 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 interface TituloProps {
-  variant?: 'white' | 'black' | 'red';
+  variant?: "white" | "black" | "red";
 }
 
 export const Titulo = styled.h2<TituloProps>`
-  ${({theme, variant = 'white'})=>{
+  ${({ theme, variant = "white" }) => {
     return {
-      fontWeight: '700',
-      fontSize: '40px',
+      fontWeight: "700",
+      fontSize: "40px",
       color: theme[variant],
-      textAlign: 'center',
-    }
+      textAlign: "center",
+    };
   }}
 
-  span{
+  span {
     color: #ff5b50;
   }
-`
+`;
 
 interface ContentProps {
   column: string;
   row: string;
-  border?: boolean;
-  variant: string;
+  borderRight?: boolean;
+  borderBottom?: boolean;
 }
 
 export const Content = styled.div<ContentProps>`
-  ${({variant, theme, column, row, border = false}) => {
+  ${({ theme, column, row, borderRight = false, borderBottom = false }) => {
     return {
       gridRow: row,
       gridColumn: column,
-      borderRight: border ? `1px solid ${theme[variant]}` : 'none',
-      borderBottom: border ? `1px solid ${theme[variant]}` : 'none',
+      borderRight: borderRight ? `1px solid ${theme.borda}` : "none",
+      borderBottom: borderBottom ? `1px solid ${theme.borda}` : "none",
       height: "100%",
       position: "relative",
-    }
+    };
   }}
-`
+`;

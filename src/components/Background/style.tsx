@@ -1,15 +1,25 @@
 import styled from "styled-components";
 
-export const BackgroundStyle = styled.section`
-  ${({theme})=>{
+interface BackgroundStyleProps {
+  color: string;
+}
+
+export const BackgroundStyle = styled.section<BackgroundStyleProps>`
+  ${({ theme, color }) => {
     return {
-      backgroundColor: theme.bodyBackground,
-    }
+      backgroundColor: theme[color],
+      overflowX: "hidden",
+    };
   }}
-`
+`;
 
 export const Margin = styled.div`
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px 0;
-`
+  padding: 50px 0;
+  position: relative;
+
+  :first-child() {
+    padding-bottom: 0;
+  }
+`;

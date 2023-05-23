@@ -3,15 +3,18 @@ import { BackgroundStyle, Margin } from "./style";
 
 interface BackgroundProps {
   children: ReactNode;
-  color?: "black" | "gray"
+  color?: "bodyBackground" | "footerBackground";
 }
 
-export default function Background({children, color = 'black'}: BackgroundProps){
-  return(
-    <BackgroundStyle>
-      <Margin>
-        {children}
-      </Margin>
-    </BackgroundStyle>
-  )
+export default function Background({
+  children,
+  color = "bodyBackground",
+}: BackgroundProps) {
+  return (
+    <>
+      <BackgroundStyle color={color}>
+        <Margin>{children}</Margin>
+      </BackgroundStyle>
+    </>
+  );
 }
