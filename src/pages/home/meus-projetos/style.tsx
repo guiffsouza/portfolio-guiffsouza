@@ -120,7 +120,7 @@ export const Image = styled.div<ImageProps>`
   background-size: cover;
   height: 100%;
   height: 300px;
-  border-radius: 20px;
+  border-radius: 10px;
 
   @media screen and (max-width: 900px) {
     display: flex;
