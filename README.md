@@ -7,7 +7,7 @@ Entre no link <https://guiffsouza-dev.com> e conheça um pouco sobre meus projet
 
 ##
 
-![Home](./assets/1.jgp)
-![Sobre](./assets/2.jgp)
-![Projetos](./assets/3.jgp)
-![Stack](./assets/4.jgp)
+![Home](./assets/1.jpg)
+![Sobre](./assets/2.jpg)
+![Projetos](./assets/3.jpg)
+![Stack](./assets/4.jpg)
