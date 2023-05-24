@@ -12,7 +12,7 @@ export default function Main({ id }: ReactScrollProps) {
                 Oi, Me chamo <span>Guilherme</span>
               </h1>
               <p>
-                <span>Bem vindo</span> ao meu Portifolio
+                <span>Bem-vindo</span> ao meu Portfolio!
               </p>
             </BoxTexto>
           </BoxMain>

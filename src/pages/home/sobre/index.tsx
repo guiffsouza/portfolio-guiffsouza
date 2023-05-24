@@ -19,7 +19,7 @@ export default function Sobre() {
         rowMobile="1"
         column="1 / 1"
         borderBottom={true}
-        borderRight={true}
+        borderRight={false}
       >
         <BoxLinks>
           <Link href="https://github.com/guiffsouza" target="_blank">
@@ -38,7 +38,7 @@ export default function Sobre() {
       </Content>
       <Content
         row="1 / 3"
-        rowMobile="2"
+        rowMobile="4"
         column="2 / 3"
         borderBottom={true}
         borderRight={true}
@@ -54,7 +54,7 @@ export default function Sobre() {
       <Content
         row="1 / 3"
         column="3 / 4"
-        rowMobile="3"
+        rowMobile="2"
         borderBottom={true}
         borderRight={true}
       >
@@ -68,7 +68,7 @@ export default function Sobre() {
       </Content>
       <Content
         row="3 / 4"
-        rowMobile="4"
+        rowMobile="3"
         column="2 / 4"
         borderBottom={true}
         borderRight={true}

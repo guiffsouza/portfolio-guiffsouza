@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -44,5 +44,19 @@ const GlobalStyle = createGlobalStyle`
     border-collapse: collapse;
     border-spacing: 0;
   }
-`
-export default GlobalStyle
+
+  ::-webkit-scrollbar{
+  width: 5px;
+  }
+
+  ::-webkit-scrollbar-track{
+  background-color: #000609;
+
+  }
+
+  ::-webkit-scrollbar-thumb{
+  background-color: #FF5B50;
+  border-radius: 30px;
+  }
+`;
+export default GlobalStyle;

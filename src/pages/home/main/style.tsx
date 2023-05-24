@@ -3,11 +3,11 @@ import { Banner2 } from "../../../services/imagens";
 
 export const BackgroundMain = styled.main`
   background-image: url(${Banner2});
-  background-color: transparent;
+  background-color: ${({ theme }) => theme.bodyBackground};
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   position: relative;
   align-items: center;
@@ -27,6 +27,10 @@ export const BackgroundMain = styled.main`
       ),
       linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
     z-index: 2;
+  }
+
+  @media screen and (max-width: 500px) {
+    height: 85vh;
   }
 `;
 

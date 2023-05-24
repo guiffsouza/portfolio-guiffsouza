@@ -31,7 +31,7 @@ export default function Particle() {
               value: "transparent",
             },
           },
-          fpsLimit: 120,
+          fpsLimit: 30,
           fullScreen: {
             enable: true,
             zIndex: 0,
@@ -73,7 +73,7 @@ export default function Particle() {
               enable: true,
             },
             move: {
-              direction: "bottom-left",
+              direction: "bottom",
               enable: true,
               outModes: {
                 default: "bounce-horizontal",
@@ -87,10 +87,10 @@ export default function Particle() {
                 enable: true,
                 area: 600,
               },
-              value: 150,
+              value: 100,
             },
             opacity: {
-              value: 0.8,
+              value: 0.3,
             },
             shape: {
               type: "circle",

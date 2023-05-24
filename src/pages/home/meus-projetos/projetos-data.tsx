@@ -31,10 +31,10 @@ export const ProjetosData: ProjetoData[] = [
   },
   {
     id: "3",
-    nome: "Max Bot",
+    nome: "Lib Formulario",
     linguagem: "JavaScript",
     descricao:
-      "Um package NPM com Components React de um formulario. Para facilitar na reutilização de códigos interno.",
+      "Um package NPM com Components React para formulario, assim facilitando na reutilização de códigos interno.",
     link: "https://github.com/guiffsouza/lib-formulario",
     imagem: ImageNpm,
   },

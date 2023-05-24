@@ -12,7 +12,7 @@ export const SideBarContainer = styled.aside<SideBarContainerProps>`
       background: theme.bodyBackground,
       opacity: isOpen ? "100%" : "0",
       top: isOpen ? "0" : "-100%",
-      transition: "0.3 all ease-in-out",
+      transition: "0.3s all ease-in-out",
       position: "fixed",
       zIndex: "999",
       width: "100%",
@@ -26,7 +26,6 @@ export const SideBarContainer = styled.aside<SideBarContainerProps>`
 
 export const CloseIcon = styled(FaTimes)`
   color: ${({ theme }) => theme.white};
-  margin-right: 20px;
 `;
 
 export const Icon = styled.div`

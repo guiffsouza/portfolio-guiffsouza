@@ -128,7 +128,7 @@ export const Image = styled.div<ImageProps>`
 `;
 
 export const BoxTexto = styled.div`
-  width: 100%;
+  width: 90%;
   h1 {
     color: ${({ theme }) => theme.white};
     font-size: 2em;
@@ -138,7 +138,7 @@ export const BoxTexto = styled.div`
   p {
     color: ${({ theme }) => theme.borda};
     line-height: 30px;
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin-bottom: 20px;
 
     @media screen and (max-width: 900px) {
