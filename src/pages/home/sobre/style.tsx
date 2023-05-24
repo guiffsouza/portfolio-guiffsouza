@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { BsGithub, BsLinkedin, BsInstagram } from "react-icons/bs";
-import { Banner } from "../../../services/imagens";
+import { Banner2 } from "../../../services/imagens";
 
 export const Grid = styled.section`
   display: grid;
@@ -10,6 +10,12 @@ export const Grid = styled.section`
   gap: 0;
   background-color: ${({ theme }) => theme.bodyBackground};
   height: 60vh;
+  position: relative;
+
+  @media screen and (max-width: 900px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
 `;
 
 export const BoxLinks = styled.div`
@@ -18,6 +24,10 @@ export const BoxLinks = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  @media screen and (max-width: 900px) {
+    flex-direction: row;
+  }
 `;
 
 export const Link = styled.a`
@@ -58,6 +68,12 @@ export const BoxTexto = styled.div`
   justify-content: center;
   padding: 0 20px;
   max-width: 400px;
+
+  @media screen and (max-width: 900px) {
+    max-width: none;
+    padding: 0;
+    margin: 0 20px;
+  }
 `;
 
 export const Texto = styled.p`
@@ -66,7 +82,7 @@ export const Texto = styled.p`
 `;
 
 export const Img = styled.div`
-  background-image: url(${Banner});
+  background-image: url(${Banner2});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

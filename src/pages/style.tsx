@@ -1,27 +1,9 @@
 import styled from "styled-components";
 
-interface TituloProps {
-  variant?: "white" | "black" | "red";
-}
-
-export const Titulo = styled.h2<TituloProps>`
-  ${({ theme, variant = "white" }) => {
-    return {
-      fontWeight: "700",
-      fontSize: "40px",
-      color: theme[variant],
-      textAlign: "center",
-    };
-  }}
-
-  span {
-    color: #ff5b50;
-  }
-`;
-
 interface ContentProps {
   column: string;
   row: string;
+  rowMobile: string;
   borderRight?: boolean;
   borderBottom?: boolean;
 }
@@ -37,4 +19,9 @@ export const Content = styled.div<ContentProps>`
       position: "relative",
     };
   }}
+
+  @media screen and (max-width: 900px) {
+    grid-column: 1;
+    grid-row: ${({ rowMobile }) => rowMobile};
+  }
 `;

@@ -83,7 +83,6 @@ const NavBar = ({ toggleButton }: NavBarProps) => {
                   Minha Stack
                 </NavLinks>
               </NavItem>
-              
             </NavMenu>
             <NavBtn>
               <NavBtnLink

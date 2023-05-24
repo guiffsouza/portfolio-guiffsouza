@@ -14,7 +14,7 @@ interface SideBarProps {
   toggleButton: () => void;
 }
 
-export default function SideBar({ isOpen, toggleButton }: SideBarProps){
+export default function SideBar({ isOpen, toggleButton }: SideBarProps) {
   return (
     <SideBarContainer isOpen={isOpen}>
       <Icon onClick={toggleButton}>
@@ -22,17 +22,14 @@ export default function SideBar({ isOpen, toggleButton }: SideBarProps){
       </Icon>
       <SideBarWrapper>
         <SideBarMenu>
-          <SideBarLink to="sobre" onClick={toggleButton}>
-            Sobre
+          <SideBarLink to="home" onClick={toggleButton}>
+            Home
           </SideBarLink>
-          <SideBarLink to="objetivo" onClick={toggleButton}>
-            Objetivo
+          <SideBarLink to="meus_projetos" onClick={toggleButton}>
+            Meus Projetos
           </SideBarLink>
-          <SideBarLink to="services" onClick={toggleButton}>
-            Serviços
-          </SideBarLink>
-          <SideBarLink to="time" onClick={toggleButton}>
-            Nosso Time
+          <SideBarLink to="minha_stack" onClick={toggleButton}>
+            Minhas Stack
           </SideBarLink>
         </SideBarMenu>
         <SideBtnWrap>
@@ -46,4 +43,4 @@ export default function SideBar({ isOpen, toggleButton }: SideBarProps){
       </SideBarWrapper>
     </SideBarContainer>
   );
-};
+}

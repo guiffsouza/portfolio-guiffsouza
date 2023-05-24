@@ -20,7 +20,10 @@ export const Nav = styled.nav<NavProps>`
       zIndex: "10",
     };
   }}
-  @media screen and(max-width: 960px) {
+  @media screen and (max-width: 1200px) {
+    padding: 0 20px;
+  }
+  @media screen and(max-width: 900px) {
     transition: 0.8s all ease;
   }
 `;
@@ -48,13 +51,13 @@ export const NavLogo = styled(LinkS)`
 export const BoxLogo = styled.div`
   max-width: 90px;
   span {
-    color: #ff5b50;
+    color: ${({ theme }) => theme.main};
   }
 `;
 
 export const MobileIcon = styled.div`
   display: none;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     display: block;
     position: absolute;
     top: 0;
@@ -72,7 +75,7 @@ export const NavMenu = styled.ul`
   list-style: none;
   text-align: center;
   margin-right: -22px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     display: none;
   }
 `;
@@ -89,15 +92,18 @@ export const NavLinks = styled(LinkS)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+  :hover {
+    color: ${({ theme }) => theme.main};
+  }
   &.active {
-    border-bottom: ${({ theme }) => `3px solid ${theme.red}`};
+    border-bottom: ${({ theme }) => `3px solid ${theme.main}`};
   }
 `;
 
 export const NavBtn = styled.nav`
   display: flex;
   align-items: center;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     display: none;
   }
 `;

@@ -3,7 +3,7 @@ import { BackgroundStyle, Margin } from "./style";
 
 interface BackgroundProps {
   children: ReactNode;
-  color?: "bodyBackground" | "footerBackground";
+  color?: "bodyBackground" | "footerBackground" | "black";
 }
 
 export default function Background({

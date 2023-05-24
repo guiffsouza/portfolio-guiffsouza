@@ -1,81 +1,84 @@
 import styled from "styled-components";
-import { ImageBackgroundMain } from "../../../services/imagens";
+import { Banner2 } from "../../../services/imagens";
 
 export const BackgroundMain = styled.main`
-  background-image: url(${ImageBackgroundMain});
+  background-image: url(${Banner2});
+  background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   height: 90vh;
   display: flex;
+  position: relative;
   align-items: center;
-`
+  z-index: -1;
+
+  :before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(14, 14, 14, 52.6) 100%
+      ),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
+    z-index: 2;
+  }
+`;
 
 export const Margin = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px 0;
-`
+`;
 
 export const BoxMain = styled.div`
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-`
-
-export const Linha = styled.div`
-  padding: 20px 0 ;
-  :last-child{
-    padding: 0;
-  }
-`
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+`;
 
 export const BoxTexto = styled.div`
-  max-width: 500px;
-  :last-child{
-    margin-top: 20px;
-    margin-left: 40px;
-  }
-  
-  p{
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  z-index: 8;
+
+  p {
     color: white;
     line-height: 22px;
-    max-width: 400px;
+    font-size: 2em;
+    margin-top: 20px;
+    text-align: center;
+
+    @media screen and (max-width: 900px) {
+      line-height: normal;
+    }
+
+    @media screen and (max-width: 400px) {
+      font-size: 1.4em;
+    }
   }
 
-  h1{
+  h1 {
     color: white;
-    font-size: 2.3em;
+    font-size: 3em;
     font-weight: 700;
-    line-height: 61px;
+    text-align: center;
+
+    @media screen and (max-width: 400px) {
+      font-size: 1.7em;
+    }
   }
-  span{
-    color: #ff5b50;
+  span {
+    color: ${({ theme }) => theme.main};
   }
-`
-
-export const Galeria = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 20px;
-`
-
-interface BoxImgProps {
-  image: string;
-  column: string;
-  row: string;
-}
-
-export const BoxImg = styled.div<BoxImgProps>`
-  background-image: url(${({image}) => image});
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  grid-column: ${({column}) => column};
-  grid-row: ${({row}) => row};
-  width: 100%;
-  height: 198px;
-  width: calc((1200px - 60px - 8px)/ 4);
-  border: 1px solid #fff;
-`
+`;

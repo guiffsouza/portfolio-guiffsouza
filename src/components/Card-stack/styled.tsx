@@ -20,6 +20,14 @@ export const BackgroundCardStack = styled.div<BackgroundCardProps>`
       gridRow: row,
     };
   }}
+
+  @media screen and (max-width: 900px) {
+    width: 500px;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 350px;
+  }
 `;
 export const BoxTexto = styled.div`
   margin: 10px;

@@ -7,25 +7,26 @@ interface SideBarContainerProps {
 }
 
 export const SideBarContainer = styled.aside<SideBarContainerProps>`
-  ${({isOpen, theme}) => {
-    return{
+  ${({ isOpen, theme }) => {
+    return {
       background: theme.bodyBackground,
-      opacity: isOpen ? '100%' : '0',
-      top: isOpen ? '0' : '-100%',
-      transition: '0.3 all ease-in-out',
-      position: 'fixed',
-      zIndex: '999',
-      width: '100%',
-      height: '100%',
-      display: 'grid',
-      alignItems: 'center',
-      left: '0',
-    }
+      opacity: isOpen ? "100%" : "0",
+      top: isOpen ? "0" : "-100%",
+      transition: "0.3 all ease-in-out",
+      position: "fixed",
+      zIndex: "999",
+      width: "100%",
+      height: "100%",
+      display: "grid",
+      alignItems: "center",
+      left: "0",
+    };
   }}
 `;
 
 export const CloseIcon = styled(FaTimes)`
-  color: ${({theme}) => theme.white};
+  color: ${({ theme }) => theme.white};
+  margin-right: 20px;
 `;
 
 export const Icon = styled.div`
@@ -39,7 +40,7 @@ export const Icon = styled.div`
 `;
 
 export const SideBarWrapper = styled.div`
-  color: ${({theme}) => theme.white};
+  color: ${({ theme }) => theme.white};
 `;
 
 export const SideBarMenu = styled.ul`
@@ -61,10 +62,10 @@ export const SideBarLink = styled(LinkS)`
   list-style: none;
   transition: 0.2s all ease-in-out;
   text-decoration: none;
-  color: ${({theme}) => theme.white};
+  color: ${({ theme }) => theme.white};
   cursor: pointer;
   &:hover {
-    color: ${({theme}) => theme.red};
+    color: ${({ theme }) => theme.red};
     transition: 0.2s ease-in-out;
   }
 `;
@@ -75,9 +76,9 @@ export const SideBtnWrap = styled.div`
 `;
 
 export const SideBarRoute = styled.a`
-  ${({theme}) => {
+  ${({ theme }) => {
     return {
-      background: theme.red,
+      background: theme.main,
       whiteSpace: "nowrap",
       padding: "16px 64px",
       color: theme.white,
@@ -88,10 +89,10 @@ export const SideBarRoute = styled.a`
       cursor: "pointer",
       transition: "all 0.2s ease-in-out",
       textDecoration: "none",
-      ':hover' : {
+      ":hover": {
         transition: "all 0.2s ease-in-out",
-        color: theme.black,
-      }
-    }
+        color: theme.main,
+      },
+    };
   }}
 `;

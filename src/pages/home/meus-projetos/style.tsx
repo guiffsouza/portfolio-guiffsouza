@@ -17,10 +17,22 @@ export const BoxGrid = styled.div<BoxGridProps>`
       transition: "all ease-in-out 0.3s",
     };
   }}
+
+  @media screen and (max-width: 900px) {
+    width: auto;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  @media screen and (max-width: 400px) {
+    width: auto;
+    flex-direction: column;
+    padding: 10px;
+  }
 `;
 
 export const Container = styled.div`
-  padding: 20px 0;
+  padding: 40px 0;
 `;
 
 interface BoxArrowProps {
@@ -34,7 +46,7 @@ export const BoxArrow = styled.div<BoxArrowProps>`
   position: absolute;
   z-index: 9;
   top: 50%;
-  margin-top: -100px;
+  margin-top: -60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,10 +89,24 @@ export const Grid = styled.div`
   grid-template-columns: 1fr 1fr 2fr;
   grid-template-rows: 1fr 2fr;
   gap: 20px;
-  padding: 20px 0;
   max-width: 1200px;
   width: 100%;
   margin-right: 80px;
+
+  @media screen and (max-width: 900px) {
+    display: flex;
+    background-color: ${({ theme }) => theme.black};
+    margin-top: 10px;
+    margin-right: 0;
+    width: auto;
+    gap: 0;
+    padding: 20px;
+  }
+
+  @media screen and (max-width: 400px) {
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 interface ImageProps {
@@ -93,8 +119,12 @@ export const Image = styled.div<ImageProps>`
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
-  min-height: 300px;
+  height: 300px;
   border-radius: 20px;
+
+  @media screen and (max-width: 900px) {
+    display: flex;
+  }
 `;
 
 export const BoxTexto = styled.div`
@@ -108,8 +138,17 @@ export const BoxTexto = styled.div`
   p {
     color: ${({ theme }) => theme.borda};
     line-height: 30px;
-    font-size: 1.3em;
+    font-size: 1.5em;
     margin-bottom: 20px;
+
+    @media screen and (max-width: 900px) {
+      color: ${({ theme }) => theme.white};
+      font-weight: 300;
+    }
+
+    @media screen and (max-width: 400px) {
+      font-size: 1em;
+    }
   }
   span {
     color: ${({ theme }) => theme.white};
@@ -123,12 +162,17 @@ export const BoxIcon = styled.div`
   a {
     text-decoration: none;
   }
+
+  @media screen and (max-width: 400px) {
+    top: 0;
+    right: 0;
+  }
 `;
 
 export const GitHubIcon = styled(BsGithub)`
   color: ${({ theme }) => theme.borda};
   font-size: 2em;
   :hover {
-    color: #ff5b50;
+    color: ${({ theme }) => theme.main};
   }
 `;

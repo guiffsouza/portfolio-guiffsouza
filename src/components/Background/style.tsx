@@ -9,6 +9,7 @@ export const BackgroundStyle = styled.section<BackgroundStyleProps>`
     return {
       backgroundColor: theme[color],
       overflowX: "hidden",
+      position: "relative",
     };
   }}
 `;

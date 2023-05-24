@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Background from "../../../components/Background";
-import { Content, Titulo } from "../../style";
+import { Content } from "../../style";
 import { ProjetosData } from "./projetos-data";
 import {
   ArrowLeft,
@@ -14,8 +14,10 @@ import {
   Grid,
   Image,
 } from "./style";
+import ReactScrollProps from "../../../interfaces/ReactScrollProps";
+import Titulo from "../../../components/Titulo";
 
-export default function MeusProjetos() {
+export default function MeusProjetos({ id }: ReactScrollProps) {
   const [margin, setMargin] = useState<string>("0");
   const [hover, setHover] = useState<boolean>(false);
 
@@ -54,55 +56,56 @@ export default function MeusProjetos() {
   };
 
   return (
-    <Background>
-      <Titulo>
-        Meus <span>Projetos</span>
-      </Titulo>
-      <BoxArrow position="left" onClick={arrowLeft} hover={hover}>
-        <ArrowLeft onClick={arrowLeft} />
-      </BoxArrow>
-      <BoxArrow position="right" onClick={arrowRight} hover={hover}>
-        <ArrowRight onClick={arrowRight} />
-      </BoxArrow>
-      <Container>
-        <BoxGrid margin={margin} width={width()}>
-          {ProjetosData.map((projeto) => {
-            return (
-              <Grid
-                key={projeto.id}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-              >
-                <Content column="1 / 4" row="1 / 2"></Content>
-                <Content column="1 / 3" row="4 / 4">
-                  <Image image={projeto.imagem} />
-                </Content>
-                <Content column="3 / 3" row="4 / 4">
-                  <BoxTexto>
-                    <BoxIcon>
-                      <a href={projeto.link} target="_blank">
-                        <GitHubIcon />
-                      </a>
-                    </BoxIcon>
-                    <p>
-                      <span>Nome: </span>
-                      {projeto.nome}
-                    </p>
-                    <p>
-                      <span>Linguagem: </span>
-                      {projeto.linguagem}
-                    </p>
-                    <p>
-                      <span>Descrição: </span>
-                      {projeto.descricao}
-                    </p>
-                  </BoxTexto>
-                </Content>
-              </Grid>
-            );
-          })}
-        </BoxGrid>
-      </Container>
-    </Background>
+    <div id={id}>
+      <Background>
+        <Titulo>
+          Meus <span>Projetos</span>
+        </Titulo>
+        <BoxArrow position="left" onClick={arrowLeft} hover={hover}>
+          <ArrowLeft onClick={arrowLeft} />
+        </BoxArrow>
+        <BoxArrow position="right" onClick={arrowRight} hover={hover}>
+          <ArrowRight onClick={arrowRight} />
+        </BoxArrow>
+        <Container>
+          <BoxGrid margin={margin} width={width()}>
+            {ProjetosData.map((projeto) => {
+              return (
+                <Grid
+                  key={projeto.id}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <Content column="1 / 3" rowMobile="1" row="4 / 4">
+                    <Image image={projeto.imagem} />
+                  </Content>
+                  <Content column="3 / 3" rowMobile="2" row="4 / 4">
+                    <BoxTexto>
+                      <BoxIcon>
+                        <a href={projeto.link} target="_blank" rel="noreferrer">
+                          <GitHubIcon />
+                        </a>
+                      </BoxIcon>
+                      <p>
+                        <span>Nome: </span>
+                        {projeto.nome}
+                      </p>
+                      <p>
+                        <span>Linguagem: </span>
+                        {projeto.linguagem}
+                      </p>
+                      <p>
+                        <span>Descrição: </span>
+                        {projeto.descricao}
+                      </p>
+                    </BoxTexto>
+                  </Content>
+                </Grid>
+              );
+            })}
+          </BoxGrid>
+        </Container>
+      </Background>
+    </div>
   );
 }

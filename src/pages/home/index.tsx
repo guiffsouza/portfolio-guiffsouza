@@ -5,7 +5,8 @@ import NavBar from "../../components/Navbar";
 import SideBar from "../../components/SideBar";
 import Sobre from "./sobre";
 import MeusProjetos from "./meus-projetos";
-import Footer from "./footer";
+import Footer from "../../components/Footer";
+import Particle from "../../components/Particle";
 
 export default function HomePage() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -18,10 +19,11 @@ export default function HomePage() {
     <>
       <SideBar isOpen={isOpen} toggleButton={toggleButton} />
       <NavBar toggleButton={toggleButton} />
-      <Main />
+      <Particle />
+      <Main id="home" />
       <Sobre />
-      <MeusProjetos />
-      <MinhaStack />
+      <MeusProjetos id="meus_projetos" />
+      <MinhaStack id="minha_stack" />
       <Footer />
     </>
   );

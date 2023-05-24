@@ -16,6 +16,7 @@ export default function Sobre() {
     <Grid>
       <Content
         row="1 / 4"
+        rowMobile="1"
         column="1 / 1"
         borderBottom={true}
         borderRight={true}
@@ -37,6 +38,7 @@ export default function Sobre() {
       </Content>
       <Content
         row="1 / 3"
+        rowMobile="2"
         column="2 / 3"
         borderBottom={true}
         borderRight={true}
@@ -52,19 +54,21 @@ export default function Sobre() {
       <Content
         row="1 / 3"
         column="3 / 4"
+        rowMobile="3"
         borderBottom={true}
         borderRight={true}
       >
         <BoxTexto>
           <Texto>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Congue
-            malesuada amet pretium lacus. Id potenti diam et cras odio viverra.
-            Amet, velit ut hac sit. Enim ultricies mauris mattis nunc semper.
+            Meu primeiro contato com a programação foi com o vba no excel, criei
+            uma paixão a partir deste momento, então comecei a estudar html, css
+            e javascript.
           </Texto>
         </BoxTexto>
       </Content>
       <Content
         row="3 / 4"
+        rowMobile="4"
         column="2 / 4"
         borderBottom={true}
         borderRight={true}
