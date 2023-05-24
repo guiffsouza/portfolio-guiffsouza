@@ -3,7 +3,7 @@
 ![GitHub](https://img.shields.io/github/license/thomasluizon/thomas-portfolio?color=purple&logo=github)
 
 Olá! Esse é meu Portfolio! <br/>
-Entre no link <https://guiffsouza-dev.com> e conheça um pouco sobre meus projetos open source!<br/>
+Entre no <a href="https://guiffsouza-dev.com" target="_blank">link</a> e conheça um pouco sobre meus projetos open source!<br/>
 
 ##
 
