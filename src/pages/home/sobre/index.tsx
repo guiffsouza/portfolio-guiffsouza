@@ -45,9 +45,11 @@ export default function Sobre() {
       >
         <BoxTexto>
           <Texto>
-            Tenho 3 anos de experiência atuando no mercado de desenvolvimento e
-            4 anos estudando tecnologia. Estou em busca de uma oportunidade para
-            atuar como Front-end, Back-end e Full Stack.
+            O que você quer ser quando crescer ? Quando criança eu dizia que
+            queria desenvolver games, bom, hoje não desenvolvo games, mas
+            desenvolvo softwares e sou apaixonado por isso! Atualmente estou em
+            busca de uma oportunidade para atuar como Front-end, Back-end e Full
+            Stack.
           </Texto>
         </BoxTexto>
       </Content>

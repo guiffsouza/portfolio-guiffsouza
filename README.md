@@ -8,6 +8,5 @@ Entre no <a href="https://guiffsouza-dev.com" target="_blank">link</a> e conheç
 ##
 
 ![Home](./assets/1.jpg)
-![Sobre](./assets/2.jpg)
 ![Projetos](./assets/3.jpg)
 ![Stack](./assets/4.jpg)
